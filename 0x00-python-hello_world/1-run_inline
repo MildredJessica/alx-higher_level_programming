@@ -1,2 +1,6 @@
 #!/bin/bash
+PYCODE=$(cat <<EOF 
+print("main.py")
+EOF
+)
 python3 -c "$PYCODE"
