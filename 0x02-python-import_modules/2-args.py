@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-
+"""Prints the number of and the list of its arguments."""
 count = len(sys.argv)
 num = 1
 if count == 1:
