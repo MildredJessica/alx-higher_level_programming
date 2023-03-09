@@ -11,15 +11,12 @@ listint_t *insert_node(listint_t **head, int number)
     listint_t *curr;
     listint_t *temp;
 
-    printf("wrong");
     temp = malloc(sizeof(listint_t));
     curr = *head;
-    printf("wrong %i",curr->n);
     if (temp == NULL)
     return (NULL);
     temp->n = number;
     temp->next = NULL;
-    printf("wronge %i",temp->n);
 
     if (curr == NULL || curr->n >= number)
     {
