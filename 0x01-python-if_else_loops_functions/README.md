@@ -95,3 +95,11 @@ Write a function that prints a string in uppercase followed by a new line.
 - You are not allowed to import any module
 - You are not allowed to use str.upper() and str.isupper()
 - Tips: ord()
+
+## 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important mandatory
+Write a function that prints the last digit of a number.
+
+- Prototype: def print_last_digit(number):
+- Returns the value of the last digit
+- You are not allowed to import any module
+- You don’t need to understand __import__
