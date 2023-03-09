@@ -17,15 +17,14 @@ int main(void)
     add_nodeint_end(&head, 1);
     add_nodeint_end(&head, 2);
     add_nodeint_end(&head, 3);
-    add_nodeint_end(&head, 5);
+    add_nodeint_end(&head, 4);
     add_nodeint_end(&head, 98);
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
 
     printf("-----------------\n");
-    printf("fix me\n");
-    insert_node(&head, 4);
+    insert_node(&head, 27);
 
     print_listint(head);
 
