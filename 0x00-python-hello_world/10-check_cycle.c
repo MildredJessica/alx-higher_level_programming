@@ -7,8 +7,15 @@
  */
 int check_cycle(listint_t *list)
 {
-int num = 0;
-if (list->n != 0)
-num = 1;
-return (num);
+listint_t *first, *second;
+
+first = second = list;
+while (first && second && second->next)
+{
+first = first->next;
+second = second->next->next;
+if (first == second)
+return (1);
+}
+return (0);
 }
