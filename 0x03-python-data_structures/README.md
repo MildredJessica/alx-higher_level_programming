@@ -113,3 +113,8 @@ Complete the source code in order to switch value of a and b
 - You can find the source code here
 - Your code should be inserted where the comment is (line 4)
 - Your program should be exactly 5 lines long
+
+## 14. CPython #0: Python lists
+Create a C function that prints some basic info about Python lists.
+
+- Prototype: void print_python_list_info(PyObject *p);
