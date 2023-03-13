@@ -29,7 +29,7 @@ listint_t *front, *back;
 int i = 0, j;
 int count = size(head);
 
-while (i < (count / 2))
+while (i != (count / 2))
 {
 front = back = *head;
 for (j = 0; j < i; j++)
