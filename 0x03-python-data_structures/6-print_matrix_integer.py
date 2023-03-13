@@ -5,10 +5,7 @@ def print_matrix_integer(matrix=[[]]):
     if len(matrix) <= 0:
         print("$")
     else:
-        for i in range(len(matrix)):
-            for s in range(len(matrix[i])):
-                if s == len(matrix) - 1:
-                    print("{:d}".format(matrix[i][s]), end="$")
-                else:
-                    print("{:d}".format(matrix[i][s]), end=" ")
-            print("")
+        for i in matrix:
+            for s in i:
+                print("{:d}".format(s), end=" " if s != i[-1] else "")
+            print()
