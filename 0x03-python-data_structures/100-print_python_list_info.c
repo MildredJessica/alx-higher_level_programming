@@ -1,7 +1,7 @@
-#include "<Python.h>"
+#include "<Python/Python.h>"
 
 /**
- * print_python_list_info - Print the basic information about pythonlist
+ * print_python_list_info - Print the basic information about python list
  * @p: Python object
  * Return: Nothing
  */
