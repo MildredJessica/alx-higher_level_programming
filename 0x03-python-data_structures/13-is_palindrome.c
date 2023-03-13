@@ -1,47 +1,67 @@
 #include "lists.h"
 
 /**
- * size - Returns the size of the linkedlist
- * @head: Singky linked list
- * Return: Size
+ * reverse_listint - Reverses a linkedlist
+ * @head: Pointer to the first node in the list
+ * Return: Pointer to the first node in the new list
  */
-int size(listint_t **head)
+void reverse_listint(listint_t **head)
 {
-listint_t *cur = *head;
-int count = 0;
-while (cur != NULL)
+listint_t *prev = NULL;
+listint_t *current = *head;
+listint_t *next = NULL;
+
+while (current)
 {
-cur = cur->next;
-count++;
+next = current->next;
+current->next = prev;
+prev = current;
+current = next;
 }
-return (count);
+*head = prev;
 }
 
 /**
  * is_palindrome - Checks if a linked list is a palindrome
- * @head: Singly linkedlist
+ * @head: Double pointer to the linkedlist
  * Return: 0 if there is no palindrome
  *         Otherwise 1
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *front, *back;
-int i = 0, j;
-int count = size(head);
+listint_t *front, *back, *temp, *dup = NULL;
 
-while (i != (count / 2) + 1)
+front = back = temp = *head;
+
+if (*head == NULL || (*head)->next == NULL)
+return (1);
+while (1)
 {
-front = back = *head;
-for (j = 0; j < i; j++)
-front = front->next;
-for (j = 0; j < count - (i + 1); j++)
+back = back->next->next;
+if (!back)
 {
+dup = front->next;
+break;
+}
+if (!back->next)
+{
+dup = front->next->next;
+break;    
+}
 back = back->next;
 }
-if (front->n != back->n)
-return (0);
-else
-i++;
+reverse_listint(&dup);
+while (dup && temp)
+{
+if (temp->n == dup->n)
+{
+dup = dup->next;
+temp = temp->next;
 }
+else
+return (0);
+}
+if (!dup)
 return (1);
+return (0);
 }
