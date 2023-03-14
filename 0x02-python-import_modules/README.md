@@ -12,7 +12,7 @@ Write a program that imports the function def add(a, b): from the file add_0.py 
 - You are not allowed to use * for importing or __import__
 - Your code should not be executed when imported - by using __import__, like the example below
 
-## 1. My first toolbox! mandatory
+## 1. My first toolbox! 
 Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
 
 - Do not use the function print (with string format to display integers) more than 4 times
