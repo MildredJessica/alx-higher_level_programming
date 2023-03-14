@@ -1,0 +1,8 @@
+#!/Users/mildred/Documents/ALX/Mine/alx-cohort22/alx-higher_level_programming/0x03-python-data_structures/my_env/project_env/bin/python3.11
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
