@@ -2,6 +2,4 @@
 
 def multiply_by_2(a_dictionary):
     """Returns a new dictionary with all values multiplied by 2"""
-    for k, v in a_dictionary.items():
-        a_dictionary[k] = v * 2
-    return a_dictionary
+    return ({item: a_dictionary[item] * 2 for item in a_dictionary})
