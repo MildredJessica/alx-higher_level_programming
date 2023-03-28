@@ -70,3 +70,6 @@ Write a function that divides element by element 2 lists.
 
 # 5. Raise exception
 A function that raises a type exception.
+
+# 6. Raise a message
+A function that raises a name exception with a message
