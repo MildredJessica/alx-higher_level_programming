@@ -67,3 +67,6 @@ Write a function that divides element by element 2 lists.
 - print: out of range
 - You have to use try: / except: / finally:
 - You are not allowed to import any module
+
+# 5. Raise exception
+A function that raises a type exception.
