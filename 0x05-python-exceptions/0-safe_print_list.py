@@ -7,10 +7,7 @@ def safe_print_list(my_list=[], x=0):
         while (count != x):
             print("{:d}".format(my_list[count]), end="")
             count += 1
-    except TypeError:
-        print("Unsupported Format")
     except IndexError:
-        print(" Index out of Range")
-    else:
-        print("")
+        pass
+    print()
     return count
