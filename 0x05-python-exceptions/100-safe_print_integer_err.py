@@ -4,6 +4,7 @@ from sys import stderr
 
 import sys
 
+
 def safe_print_integer_err(value):
     """A function that prints an integer."""
     try:
