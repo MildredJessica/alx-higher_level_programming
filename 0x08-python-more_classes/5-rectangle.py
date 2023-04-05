@@ -68,3 +68,7 @@ class Rectangle:
         """"A string representation of the rectangle"""
         eval('Rectangle(self.__width, self.__height)')
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Deletes rectangle"""
+        print("Bye rectangle...")
