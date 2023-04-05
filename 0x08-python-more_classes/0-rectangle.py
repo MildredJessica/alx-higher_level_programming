@@ -2,5 +2,4 @@
 
 
 class Rectangle():
-    """Defines a Rectangle"""
     pass
