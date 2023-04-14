@@ -51,6 +51,46 @@ Traceback (most recent call last):
         raise ValueError(name, "must be greater than 0")
 ValueError: ('greg', 'must be greater than 0')
 
+>>> bg.integer_validator('vic', "betty")
+Traceback (most recent call last):
+    File "<stdin>", line 23, in <module>
+        bg.integer_validator('vic', "betty")
+    File "<stdin>", line 18, in integer_validator
+        raise TypeError(name, "must be an integer")
+TypeError: ('vic', 'must be an integer')
+
+>>> bg.integer_validator("vic", [1, 2, 3])
+Traceback (most recent call last):
+    File "<stdin>", line 23, in <module>
+        bg.integer_validator('vic', [1, 2, 3])
+    File "<stdin>", line 18, in integer_validator
+        raise TypeError(name, "must be an integer")
+TypeError: ('vic', 'must be an integer')
+
+>>> bg.integer_validator("dict", {"key": "value"})
+Traceback (most recent call last):
+    File "<stdin>", line 23, in <module>
+        bg.integer_validator("dict", {"key": "value"})
+    File "<stdin>", line 18, in integer_validator
+        raise TypeError(name, "must be an integer")
+TypeError: ('dict', 'must be an integer')
+
+
+>>> bg.integer_validator("set", ("key", "value"))
+Traceback (most recent call last):
+  File "<stdin>", line 23, in <module>
+    bg.integer_validator("set", ("key", "value"))
+  File "<stdin>", line 18, in integer_validator
+    raise TypeError(name, "must be an integer")
+TypeError: ('set', 'must be an integer')
+
+>>> bg.integer_validator("frozenset", frozenset(["hello", "world"]))
+Traceback (most recent call last):
+  File "<stdin>", line 23, in <module>
+    bg.integer_validator("frozenset", frozenset(["hello", "world"]))
+  File "<stdin>", line 18, in integer_validator
+    raise TypeError(name, "must be an integer")
+TypeError: ('frozenset', 'must be an integer')
 
 >>> try:
 ...     bg.integer_validator("name", "John")
