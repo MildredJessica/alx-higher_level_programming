@@ -5,6 +5,5 @@ if (isNaN(count)) {
 } else {
   for (let i = 0; i < count; i++) {
     console.log('X'.repeat(count));
-    
   }
 }
