@@ -1,21 +1,19 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-
-class Rectangle():
-    def __init__(self, width=0, height=0):
-=======
 """A class that defines a rectangle"""
 
 
 class Rectangle:
     """An empty class that represents a rectangle"""
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialises a new Rectangle.
         Args:
         width (int): The width of the rectangle
-        height (int): The height of the rectangle
+        height (int): THe height of the rectangle
         """
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -52,3 +50,34 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Returns the area of a rectangle"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Returns the perimeter of a rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """"Prints the rectangle in #"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        sym = []
+        for i in range(self.__height):
+            [sym.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                sym.append("\n")
+        return ("".join(sym))
+
+    def __repr__(self):
+        """"A string representation of the rectangle"""
+        eval('Rectangle(self.__width, self.__height)')
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Deletes rectangle"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
