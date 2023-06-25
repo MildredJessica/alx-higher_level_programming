@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""Gets starts stating eith capital N"""
+""""Gets starts stating with capital N"""
 import sys
 import MySQLdb
 
