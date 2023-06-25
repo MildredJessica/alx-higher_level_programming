@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Connects to a database and selects the states"""
+""" Connects to a database and selects
+the details of a state based on the name"""
 
 import sys
 import MySQLdb
@@ -9,7 +10,8 @@ if __name__ == "__main__":
             user=sys.argv[1], passwd=sys.argv[2],
             database=sys.argv[3])
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states ORDER BY id ASC""")
+    cur.execute("""SELECT * FROM states  WHERE name = %s
+            ORDER BY id ASC""", (sys.argv[4],))
     results = cur.fetchall()
     for row in results:
         print(row)
