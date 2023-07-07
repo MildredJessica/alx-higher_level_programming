@@ -2,9 +2,6 @@
 """A class that defines a rectangle"""
 
 
-from cmath import rect
-
-
 class Rectangle:
     """An empty class that represents a rectangle"""
     number_of_instances = 0
