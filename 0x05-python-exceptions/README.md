@@ -73,3 +73,6 @@ A function that raises a type exception.
 
 # 6. Raise a message
 A function that raises a name exception with a message
+
+# 7. Safe integer print with error messag
+A function that prints an integer.

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import sys
-from unittest import result
 
 
 def safe_function(fct, *args):
