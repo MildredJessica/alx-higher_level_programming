@@ -4,16 +4,17 @@
 
 const req = require('request');
 const url = process.argv[2];
-const charID = '18';
+const charID = '18/';
 req(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const respBody = JSON.parse(body);
+    const respBody = JSON.parse(body).results;
     let count = 0;
-    for (const i of respBody.results) {
-      for (const j of i.characters) {
-        if (j.search(charID) > 0) {
+    for (let k = 0; k < respBody.length; k++) {
+      const characters = respBody[k].characters;
+      for (let j = 0; j < characters.length; j++) {
+        if (characters[j].endsWith(charID)) {
           count++;
         }
       }
